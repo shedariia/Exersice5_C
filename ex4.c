@@ -1,6 +1,6 @@
 /* Home Work No 5, exersize No 4 */
 
-#include "pch.h"
+//#include "pch.h"
 #include <stdio.h>	/* printf(), scanf() */
 #include <stdlib.h>	/* srand(), rand() */
 #include <time.h>	/* time() */
