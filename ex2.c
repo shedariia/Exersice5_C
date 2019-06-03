@@ -1,6 +1,6 @@
 /* Home Work No 5, exersize No 2 */
 
-#include "pch.h"
+//#include "pch.h"
 #include <stdio.h>	/* printf(), scanf() */
 
 #define L 70 /* Length of array */
