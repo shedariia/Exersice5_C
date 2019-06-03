@@ -6,10 +6,11 @@
 #include <time.h>	/* time() */
 
 #define N 15 /* Length of array */
+#define EQUAL_NUMS 3
 
 int main(void)
 {
-	int i = 0, j = 0, flag = 0;
+	int i = 0, j = 0,  cntEqualsNums;
 	int A[N] = { 0 };
 
 	srand(time(NULL)); /* random generation on */
@@ -21,13 +22,14 @@ int main(void)
 	}
 
 	/* Search same numbers */
-	for (i = 0; i < N; ++i)
+	for (i = 0; i < N && cntEqualsNums < EQUAL_NUMS; ++i)
 	{
-		for (j = i + 1; j < N; ++j)
+		cntEqualsNums = 1;
+		for (j = i + 1; j < N ; ++j)
 		{
 			if (A[i] == A[j])
 			{
-				flag = 1;
+				cntEqualsNums++;
 			}
 		}
 	}
@@ -38,7 +40,7 @@ int main(void)
 		printf("%d ", A[i]);
 	}
 
-	if (flag == 1)
+	if (cntEqualsNums >= EQUAL_NUMS)
 	{
 		printf("\nYes\n");
 	}
