@@ -1,6 +1,5 @@
 /* Home Work No 5, exersize No 3 */
 
-//#include "pch.h"
 #include <stdio.h>	/* printf(), scanf() */
 #include <stdlib.h>	/* srand(), rand() */
 #include <time.h>	/* time() */
@@ -21,14 +20,11 @@ int main(void)
 	}
 
 	/* Search same numbers */
-	for (i = 0; i < N; ++i)
+	for (i = 0; i < N - 1; ++i)
 	{
-		for (j = i + 1; j < N; ++j)
+		if (A[i] == A[i - 1] && A[i] == A[i + 1])
 		{
-			if (A[i] == A[j])
-			{
-				flag = 1;
-			}
+			flag = 1;
 		}
 	}
 
@@ -38,7 +34,7 @@ int main(void)
 		printf("%d ", A[i]);
 	}
 
-	if (flag == 1)
+	if (flag)
 	{
 		printf("\nYes\n");
 	}
