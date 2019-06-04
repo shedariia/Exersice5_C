@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int i = 0, j = 0, flag = 0;
+	int i = 0, j = 0, count = 1;
 	int A[N] = { 0 };
 
 	srand(time(NULL)); /* random generation on */
@@ -27,8 +27,13 @@ int main(void)
 		{
 			if (A[i] == A[j])
 			{
-				flag = 1;
+				count++;
 			}
+		}
+		
+		if (count < 3)
+		{
+			count = 1;
 		}
 	}
 
@@ -38,7 +43,7 @@ int main(void)
 		printf("%d ", A[i]);
 	}
 
-	if (flag == 1)
+	if (count >= 3)
 	{
 		printf("\nYes\n");
 	}
